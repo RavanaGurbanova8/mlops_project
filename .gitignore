@@ -205,3 +205,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# ignore datasets
+backend/data/external/
+!backend/data/external/.gitkeep
+backend/data/interim
+!backend/data/interim/.gitkeep
+backend/data/processed
+!backend/data/processed/.gitkeep
