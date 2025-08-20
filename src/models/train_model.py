@@ -6,7 +6,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from category_encoders import CatBoostEncoder
 from xgboost import XGBClassifier
+import sys
+import os
+
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../data'))
+
 from make_dataset import load_dataset
+
 
 def build_pipeline(num_cols, cat_cols):
     pipe_num = Pipeline([

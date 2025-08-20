@@ -7,15 +7,19 @@ requires-python = ">= 3.12"
 authors = [{ name = "RavanaGurbanova8", email = "ravana.gurbanova17@gmail.com" }]
 dependencies = [
     "category-encoders>=2.8.1",
+    "fastapi>=0.116.1",
     "joblib>=1.5.1",
     "jupyter>=1.1.1",
     "matplotlib>=3.10.5",
     "pandas>=2.3.1",
     # runtime deps go here, e.g. "pandas>=2.2"
+    "pydantic>=2.11.7",
     "requests>=2.32.4",
     "scikit-learn>=1.7.1",
     "scipy>=1.16.1",
     "seaborn>=0.13.2",
+    "streamlit>=1.48.1",
+    "uvicorn[standard]>=0.35.0",
     "xgboost>=3.0.4",
 ]
 
@@ -31,3 +35,10 @@ profile = "black" # keeps isort compatible with Black
 line_length = 100
 src_paths = ["src"]
 extend_skip = ["data", "reports", "models", "notebooks"]
+
+[tool.uv.workspace]
+members = [
+    "backend/backend",
+    "backend",
+    "frontend",
+]

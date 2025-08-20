@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+.env
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+.git/
+.gitignore
+notebooks/
+reports/
+data/
+.ruf*       # ruff cache
